@@ -69,9 +69,10 @@ To run the Python analysis locally, set up a virtual environment:
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repository-url>
+git clone <https://github.com/AnnaKulai79/Final-Project/tree/main>
 cd <repository-folder>
 ```
+> **Note:** Replace `<repository-folder>` with the actual name of the directory created on your machine (e.g., `Final-Project`).
 
 ### 2. Create and activate a virtual environment
 **Windows:**
