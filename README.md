@@ -6,11 +6,16 @@ This project provides a comprehensive analysis of e-commerce customer behavior, 
 
 ## 📂 Project Structure
 
+* `.github/workflows/` — Automation scripts for **GitHub Actions**, including `jekyll-gh-pages.yml` for automated project deployment.
+* `index.html` — **Interactive Web Report**. A comprehensive, bilingual (UA/EN) showcase featuring embedded Tableau dashboards, SQL results, and advanced ML insights with dynamic language switching.
 * `TASK.md` — Original project requirements and technical tasks covering SQL, Tableau, and Python analysis.
 * `thelook_ecommerce.sql` — SQL queries developed for BigQuery analyzing users, products, and finances.
 * `Ecommerce Dataset for Data Analysis(Kaggle).twbx` — Tableau workbook featuring interactive business dashboards.
 * `linear_regression.ipynb` — Jupyter Notebook with EDA, Linear Regression, and Random Forest models.
-* `report.md` — A comprehensive project showcase documenting the end-to-end analytical workflow, including SQL data extraction, BI dashboard insights, and advanced statistical modeling with business recommendations.
+* `report.md` — Static project documentation of the analytical workflow.
+* `static/` — Directory for web assets:
+    * `style.css` — Custom styles for the interactive report.
+    * `background.png` — Background image for the web report interface.
 * `Data/` — Storage for the original raw CSV files sourced from Kaggle before any processing.
 * `Images/` — Directory containing project visualizations:
     * **SQL Screenshots:** Execution results of queries in Google BigQuery.
@@ -23,6 +28,9 @@ This project provides a comprehensive analysis of e-commerce customer behavior, 
 
 ```text
 FINAL PROJECT
+     ├── .github/
+     │   └── workflows/
+     │       └── jekyll-gh-pages.yml
      ├── .venv/
      ├── Data/
      │   └── project1_df.csv
@@ -33,17 +41,21 @@ FINAL PROJECT
      │   │   ├── cleaned_data_distribution.png
      │   │   └── raw_data_distribution.png
      │   ├── SQL/
-     │   │   ├── Task 1 BigQuery.png
-     │   │   ├── Task 2 BigQuery.png
-     │   │   ├── Task 3v1 BigQuery.png
-     │   │   ├── Task 3v2 BigQuery.png
-     │   │   ├── Task 4 BigQuery.png
-     │   │   └── Task 5 BigQuery.png
+     │   │   ├── Task_1_BigQuery.png
+     │   │   ├── Task_2_BigQuery.png
+     │   │   ├── Task_3v1_BigQuery.png
+     │   │   ├── Task_3v2_BigQuery.png
+     │   │   ├── Task_4_BigQuery.png
+     │   │   └── Task_5_BigQuery.png
      │   └── Tableau/
      │       ├── tableau_dashboard_1.png
      │       └── tableau_dashboard_2.png
+     ├── static/
+     │   ├── background.png
+     │   └── style.css
      ├── .gitignore
      ├── Ecommerce Dataset for Data Analysis(Kaggle).twbx
+     ├── index.html
      ├── linear_regression.ipynb
      ├── README.md
      ├── report.md

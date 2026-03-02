@@ -30,17 +30,21 @@ body {
     left: 0;
     z-index: 1000;
 
-    background-image: url("background.png");
+    /* Використовуємо суцільний колір або ту саму картинку без розмиття */
+    background-image: url("background.png"); 
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+
+    /* Додаємо легку тінь знизу, щоб візуально підняти хедер над контентом */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #427192; /* Ваша фірмова синя лінія */
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
     box-sizing: border-box;
-    border-bottom: 2px solid #427192;
 }
 
 .hero-title {
@@ -76,7 +80,7 @@ body {
 
 /* --- КОНТЕЙНЕР ТА КАРТКИ --- */
 .container {
-    max-width: 1000px;
+    max-width: 1300px;
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
@@ -210,19 +214,26 @@ h2 {
 }
 /* Сітка для порівняння графіків EDA */
 
+/* Знайти та оновити цей блок у style.css */
 .eda-grid {
     display: flex;
-    gap: 20px;
-    margin: 20px 0;
+    flex-direction: column; /* Графіки стають один під одним */
+    gap: 40px;              /* Збільшуємо відстань між графіками */
+    margin: 30px 0;
+    align-items: center;    /* Центруємо графіки */
 }
+
 .eda-item {
-    flex: 1;
+    width: 100%;            /* Контейнер графіка займає всю ширину */
+    max-width: 850px;       /* Обмежуємо максимальну ширину для чіткості */
     text-align: center;
 }
+
 .eda-item img {
     width: 100%;
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Трохи виразніша тінь */
 }
 .ml-results-box {
     background: #f8f9fa;
@@ -278,4 +289,34 @@ h2 {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+.main-footer {
+    width: 100%;
+    padding: 60px 0 30px 0; /* Великий відступ зверху, щоб відокремити від контенту */
+    margin-top: 20px;
+    background: transparent; /* Повністю прозорий, щоб бачити фон */
+    text-align: right;
+}
+
+.footer-content {
+    /* Вирівнюємо по правому краю екрана з невеликим відступом */
+    max-content: 100%;
+    padding-right: 40px;
+}
+
+.footer-content p {
+    color: #427192; /* Ваш фірмовий синій */
+    font-weight: 700;
+    margin: 5px 0;
+    font-size: 0.9rem;
+    opacity: 0.7; /* Робимо трохи блідим, щоб не відволікав */
+}
+
+.footer-sub {
+    font-weight: 400 !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }

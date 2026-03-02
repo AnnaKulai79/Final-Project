@@ -2,78 +2,96 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Комплексний аналіз електронної комерції — Anna Kulai</title>
+    <title>Аналітичне дослідження — Anna Kulai</title>
     <link rel="stylesheet" href="static/style.css">
+    <style>
+        .language-switch { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; }
+        .lang-label { font-size: 0.75rem; font-weight: 700; color: #427192; }
+        .switch { position: relative; display: inline-block; width: 34px; height: 18px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px; }
+        .slider:before { position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; }
+        input:checked + .slider { background-color: #427192; }
+        input:checked + .slider:before { transform: translateX(16px); }
+        .author-block { text-align: center; min-width: 250px; }
+    </style>
 </head>
 <body>
 
 <header class="main-title-box">
     <div class="title-content">
-        <h1 class="hero-title">Комплексний аналіз електронної комерції</h1>
-        <p class="hero-subtitle">Інтегроване дослідження з використанням SQL • Tableau • Python</p>
+        <h1 class="hero-title" data-en="Analytical Research: From Data to Strategic Decisions">
+            Аналітичне дослідження: Від даних до стратегічних рішень
+        </h1>
+        <p class="hero-subtitle" data-en="Multi-platform Analysis: SQL • Tableau • Python (ML)">
+            Мультиплатформений аналіз: SQL • Tableau • Python (ML)
+        </p>
     </div>
     <div class="author-block">
         <p class="author-name">Anna Kulai</p>
-        <p class="academy-info">Підсумковий проєкт | DTA Academy</p>
+        <p class="academy-info" data-en="DTA Academy Final Project">Підсумковий проєкт | DTA Academy</p>
+        <div class="language-switch">
+            <span class="lang-label">UA</span>
+            <label class="switch"><input type="checkbox" id="lang-toggle"><span class="slider"></span></label>
+            <span class="lang-label">EN</span>
+        </div>
     </div>
 </header>
 
 <main class="container">
 
 <section class="content-section">
-    <h2 class="sticky-sub-title">Блок 1: SQL-запити до даних (BigQuery)</h2>
+    <h2 class="sticky-sub-title" data-en="Block 1: SQL Data Queries (BigQuery)">Блок 1: SQL-запити до даних (BigQuery)</h2>
     
     <div class="card">
-        <p><strong>Завдання 1: Користувачі з Бразилії, зареєстровані у 2023 році</strong></p>
-        <div class="task-info">
+        <p><strong data-en="Task 1: Users from Brazil registered in 2023">Завдання 1: Користувачі з Бразилії, зареєстровані у 2023 році</strong></p>
+        <div class="task-info" data-en="Selection of names, surnames, and email addresses of users from Brazil registered during 2023.">
             Вибірка імен, прізвищ та електронних адрес користувачів із Бразилії, зареєстрованих протягом 2023 року.
         </div>
-        <img src="Images/SQL/Task_1_BigQuery.png" alt="SQL Завдання 1" class="sql-screenshot">
+        <img src="Images/SQL/Task_1_BigQuery.png" alt="SQL 1" class="sql-screenshot">
     </div>
 
     <div class="card">
-        <p><strong>Завдання 2: Загальна кількість товарів за категоріями</strong></p>
-        <div class="task-info">
+        <p><strong data-en="Task 2: Total products by category">Завдання 2: Загальна кількість товарів за категоріями</strong></p>
+        <div class="task-info" data-en="Counting the number of products in each category, sorted from highest to lowest.">
             Підрахунок кількості товарів у кожній категорії з сортуванням від найбільшої кількості.
         </div>
-        <img src="Images/SQL/Task_2_BigQuery.png" alt="SQL Завдання 2" class="sql-screenshot">
+        <img src="Images/SQL/Task_2_BigQuery.png" alt="SQL 2" class="sql-screenshot">
     </div>
 
     <div class="card">
-        <p><strong>Завдання 3: Аналіз відправлених замовлень (об’єднання таблиць)</strong></p>
-        <div class="task-info">
+        <p><strong data-en="Task 3: Analysis of shipped orders (Table Join)">Завдання 3: Аналіз відправлених замовлень (об’єднання таблиць)</strong></p>
+        <div class="task-info" data-en="Joining orders and users tables to analyze orders with 'Shipped' status.">
             Об’єднання таблиць замовлень та користувачів для аналізу замовлень зі статусом «Відправлено».
         </div>
-        <img src="Images/SQL/Task_3v1_BigQuery.png" alt="SQL Завдання 3 v1" class="sql-screenshot">
-        <img src="Images/SQL/Task_3v2_BigQuery.png" alt="SQL Завдання 3 v2" class="sql-screenshot" style="margin-top:20px;">
+        <img src="Images/SQL/Task_3v1_BigQuery.png" alt="SQL 3.1" class="sql-screenshot">
+        <img src="Images/SQL/Task_3v2_BigQuery.png" alt="SQL 3.2" class="sql-screenshot" style="margin-top:20px;">
     </div>
 
     <div class="card">
-        <p><strong>Завдання 4: Фінансовий аналіз — найдорожчі замовлення</strong></p>
-        <div class="task-info">
+        <p><strong data-en="Task 4: Financial analysis — most expensive orders">Завдання 4: Фінансовий аналіз — найдорожчі замовлення</strong></p>
+        <div class="task-info" data-en="Finding the ten most expensive orders by aggregating product costs.">
             Пошук десяти найдорожчих замовлень шляхом агрегування вартості товарів.
         </div>
-        <img src="Images/SQL/Task_4_BigQuery.png" alt="SQL Завдання 4" class="sql-screenshot">
+        <img src="Images/SQL/Task_4_BigQuery.png" alt="SQL 4" class="sql-screenshot">
     </div>
 
     <div class="card">
-        <p><strong>Завдання 5: Географія клієнтів</strong></p>
-        <div class="task-info">
+        <p><strong data-en="Task 5: Customer Geography">Завдання 5: Географія клієнтів</strong></p>
+        <div class="task-info" data-en="Analysis of unique user distribution by country (filter: over 500 people).">
             Аналіз розподілу унікальних користувачів за країнами (фільтр: понад 500 осіб).
         </div>
-        <img src="Images/SQL/Task_5_BigQuery.png" alt="SQL Завдання 5" class="sql-screenshot">
+        <img src="Images/SQL/Task_5_BigQuery.png" alt="SQL 5" class="sql-screenshot">
     </div>
 </section>
 
-
 <section class="content-section">
-    <h2 class="sticky-sub-title">Блок 2: Аналітичні панелі Tableau та висновки</h2>
+    <h2 class="sticky-sub-title" data-en="Block 2: Tableau Dashboards & Insights">Блок 2: Аналітичні панелі Tableau та висновки</h2>
     
     <div class="card">
-        <p><strong>Інтерактивна аналітична панель бізнес-показників</strong></p>
-        <div class="task-info">
-            Інтерактивний аналіз продажів та ключових показників ефективності.
-            Використовуйте фільтри безпосередньо у вікні аналітики для деталізації даних.
+        <p><strong data-en="Interactive Business Metrics Dashboard">Інтерактивна аналітична панель бізнес-показників</strong></p>
+        <div class="task-info" data-en="Visual research of sales performance: revenue seasonality analysis, comparative characteristics of transactions with discounts, and segmentation of category expenses by customer age groups. Interactive analysis of sales and key performance indicators (KPIs).">
+          Візуальне дослідження ефективності продажів: аналіз сезонності доходу, порівняльна характеристика чеків із застосуванням знижок та сегментація категорійних витрат за віковими групами клієнтів.Інтерактивний аналіз продажів та ключових показників ефективності.
         </div>
 
         <div class="tableau-embed-container">
@@ -86,7 +104,7 @@
             </div>
         </div>
 
-        <div class="task-info" style="margin-top: 30px;">
+        <div class="task-info" style="margin-top: 30px;" data-en="<strong>Demographic Structure Analysis:</strong> Customer behavior study by gender and age.">
             <strong>Аналіз демографічної структури:</strong> Дослідження поведінки покупців у розрізі статі та віку.
         </div>
 
@@ -99,38 +117,15 @@
                 </object>
             </div>
         </div>
-
-        <script type='text/javascript'>
-            function loadTableau(id) {
-                var divElement = document.getElementById(id);
-                var vizElement = divElement.getElementsByTagName('object')[0];
-                
-                vizElement.style.width = '100%';
-                
-                if (divElement.offsetWidth > 800) {
-                    vizElement.style.height = '850px'; 
-                } else {
-                    vizElement.style.height = '1600px'; 
-                }
-                
-                var scriptElement = document.createElement('script');
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);
-            }
-            
-            loadTableau('viz1772448988327');
-            loadTableau('viz1772449015219');
-        </script>
     </div>
 </section>
 
-
 <section class="content-section">
-    <h2 class="sticky-sub-title">Блок 3: Python — Аналіз продажів та прогнозне моделювання</h2>
+    <h2 class="sticky-sub-title" data-en="Block 3: Statistical Analysis & Predictive Analytics">Блок 3: Статистичний аналіз та предиктивна аналітика</h2>
     
     <div class="card">
-        <h3 style="color: #427192;">1. Exploratory Data Analysis & Data Integrity</h3>
-        <p>
+        <h3 style="color: #427192;" data-en="1. Exploratory Data Analysis & Data Integrity">1. Попередній аналіз (EDA) та перевірка якості даних</h3>
+        <p data-en="During the initial exploratory research, 613 negative values were identified in the Net Amount field. Comparative visualization of the distribution before and after cleaning demonstrated no significant difference in the data structure. Consequently, it was decided to remove these records to ensure model stability. The Gross Amount metric was used for forecasting.">
             Під час первинного дослідження у полі <code>Net Amount</code> було виявлено 613 від’ємних значень.
             Порівняльна візуалізація розподілу до та після очищення продемонструвала відсутність суттєвої різниці у структурі даних.
             З огляду на це було прийнято рішення видалити ці записи для забезпечення стабільності моделей.
@@ -139,184 +134,219 @@
         
         <div class="eda-grid">
             <div class="eda-item">
-                <p><strong>Initial Data Research (Net Amount Anomalies)</strong></p>
-                <img src="Images/ML_Plots/raw_data_distribution.png" alt="Raw Distribution">
+                <p><strong data-en="Initial Data Research">Початкове дослідження</strong></p>
+                <img src="Images/ML_Plots/raw_data_distribution.png" alt="Raw">
             </div>
             <div class="eda-item">
-                <p><strong>Post-Cleaning Distribution (Gross Amount)</strong></p>
-                <img src="Images/ML_Plots/cleaned_data_distribution.png" alt="Cleaned Distribution">
+                <p><strong data-en="Post-Cleaning Distribution">Розподіл після очищення</strong></p>
+                <img src="Images/ML_Plots/cleaned_data_distribution.png" alt="Cleaned">
             </div>
         </div>
 
-        <h3 style="color: #427192; margin-top: 40px;">2. Research Methodology: Testing Hypotheses</h3>
-        <p>
-            Для перевірки впливу віку на середній чек було використано три підходи:
-        </p>
+<h3 style="color: #427192; margin-top: 40px;" data-en="2. Research Methodology & Feature Engineering">2. Методологія дослідження та підготовка ознак</h3>
+<p data-en="At this stage, we prepared three different variations of the independent variables (X) to identify the most significant predictors for Gross Amount (y):">
+    На цьому етапі було підготовлено три варіації незалежних змінних (X) для визначення найбільш значущих предикторів для суми чека (Gross Amount, y):
+</p>
 
-        <div class="ml-methodology-box">
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="margin-bottom: 15px;">
-                    <strong>Numeric Age Analysis:</strong> використання віку як безперервної числової змінної.
-                </li>
-                <li style="margin-bottom: 15px;">
-                    <strong>Age Categorical Groups:</strong> сегментація 18–25, 25–45, 45+.
-                </li>
-                <li>
-                    <strong>Multi-feature Behavioral Model:</strong> аналіз демографічних характеристик разом із платіжними методами.
-                </li>
-            </ul>
-        </div>
-
-        <h3 style="color: #427192; margin-top: 40px;">3. Model Comparison Table</h3>
-<div class="model-table-container">
-<table class="model-comparison-table">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Модель</th>
-            <th>R²</th>
-            <th>MAE</th>
-            <th>Ключові результати</th>
-            <th>Висновок</th>
-        </tr>
-    </thead>
-    <tbody>
-
-        <tr>
-            <td>3.1</td>
-            <td>
-                <strong>Simple Linear Regression</strong><br>
-                <small>(Numeric Age)</small>
-            </td>
-            <td>-0.00016</td>
-            <td>$1433.87</td>
-            <td>
-                Intercept: 3020.00<br>
-                Age = 8.86<br>
-                p-value = 0.3073
-            </td>
-            <td>
-                Вік не має статистично значущого лінійного впливу на витрати.
-            </td>
-        </tr>
-
-        <tr>
-            <td>3.2</td>
-            <td>
-                <strong>Linear Regression</strong><br>
-                <small>(Categorical Age)</small>
-            </td>
-            <td>0.00008</td>
-            <td>$1433.68</td>
-            <td>
-                Intercept: 3060.88<br>
-                Усі p-value &gt; 0.15
-            </td>
-            <td>
-                Статистично значущих відмінностей між віковими групами не виявлено.
-            </td>
-        </tr>
-
-        <tr>
-            <td>3.3</td>
-            <td>
-                <strong>Random Forest</strong><br>
-                <small>(Categorical Age)</small>
-            </td>
-            <td>0.00007</td>
-            <td>$1433.68</td>
-            <td>
-                Середній прогноз: $3045.47<br>
-                Важливість ознак розподілена рівномірно
-            </td>
-            <td>
-                Модель підтверджує дуже низьку прогностичну силу віку.
-            </td>
-        </tr>
-
-        <tr class="sig-row">
-            <td>3.4</td>
-            <td>
-                <strong>Multiple Linear Regression</strong><br>
-                <small>(All Features)</small>
-            </td>
-            <td>-0.00059</td>
-            <td>$1433.99</td>
-            <td>
-                <strong>PhonePe UPI: +129.60 (p=0.008)</strong><br>
-                Gender_Other: +44.70 (p=0.021)<br>
-                Intercept: 2965.07
-            </td>
-            <td>
-                На витрати впливають платіжний метод та демографічні фактори, але не вік.
-            </td>
-        </tr>
-
-        <tr>
-            <td>3.5</td>
-            <td>
-                <strong>Final Numeric Validation</strong>
-            </td>
-            <td>0.00000</td>
-            <td>$1438.57</td>
-            <td>
-                Age = 3.24<br>
-                p-value = 0.6758
-            </td>
-            <td>
-                Підтверджено вкрай слабкий числовий ефект віку.
-            </td>
-        </tr>
-
-        <tr>
-            <td>3.6</td>
-            <td>
-                <strong>Final Categorical Validation</strong>
-            </td>
-            <td>0.00020</td>
-            <td>$1438.41</td>
-            <td>
-                Усі вікові групи статистично незначущі
-            </td>
-            <td>
-                Остаточне підтвердження: вікова категорія не впливає на витрати.
-            </td>
-        </tr>
-
-    </tbody>
-</table>
-</div>
-        <h3 style="color: #427192; margin-top: 40px;">4. Statistical Insights & Conclusions</h3>
+<div class="ml-methodology-box">
+    <ul style="list-style: none; padding: 0; margin: 0;" data-en="
+        <li style='margin-bottom: 15px;'><strong>1. Numerical Representation (Rank):</strong> Age categories are mapped to numerical ranks (1 to 5), treating age as an ordinal variable to check for linear progression in spending.</li>
+        <li style='margin-bottom: 15px;'><strong>2. Categorical Representation (One-Hot Encoding):</strong> Age groups are converted into binary 'dummy' variables. The 'under 18' group is used as the baseline to measure the relative impact.</li>
+        <li><strong>3. Multi-Feature Analysis (Broad Scope):</strong> A comprehensive set including Gender, Product Category, and Purchase Method to evaluate the collective predictive power of non-demographic factors.</li>">
         
-        <div class="eda-grid">
-            <div class="eda-item">
-                <p><strong>Numeric Regression Plot</strong></p>
-                <img src="Images/ML_Plots/age_numeric_regression.png" alt="Numeric Regression">
-            </div>
-            <div class="eda-item" style="margin-top: 20px;">
-                <p><strong>Categorical Comparison Plot</strong></p>
-                <img src="Images/ML_Plots/age_categorical_regression.png" alt="Categorical Regression">
-            </div>
-        </div>
+        <li style="margin-bottom: 15px;">
+            <strong>1. Числове представлення (Ранг):</strong> Категорії віку перетворені на числові ранги (від 1 до 5) для перевірки наявності лінійної прогресії у витратах.
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>2. Категоріальне представлення (One-Hot Encoding):</strong> Вікові групи перетворені на бінарні змінні. Група «до 18 років» використана як <strong>базова лінія</strong> для вимірювання відносного впливу інших груп.
+        </li>
+        <li>
+            <strong>3. Багатофакторний аналіз (Broad Scope):</strong> Комплексний набір даних, що включає стать, категорію товару та метод оплати для оцінки сукупної прогностичної сили не демографічних факторів.
+        </li>
+    </ul>
+</div>
 
-        <div class="q-box" style="margin-top: 30px;">
-            <strong>Хто приносить більше доходу?</strong><br>
-            Аналіз показав, що вік клієнта не має статистично значущого впливу на величину середнього чека.
-            Значення R² у всіх моделях наближене до нуля, що свідчить про відсутність пояснювальної сили.
-        </div>
+        <h3 style="color: #427192; margin-top: 40px;" data-en="3. Model Comparison Table">3. Порівняльна таблиця моделей</h3>
+        <div class="model-table-container">
+<div class="model-table-container">
+    <table class="model-comparison-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th data-en="Model">Модель</th>
+                <th>R²</th>
+                <th>MAE</th>
+                <th data-en="Key Results">Ключові результати</th>
+                <th data-en="Conclusion">Висновок</th>
+            </tr>
+        </thead>
+        <tbody>
 
-        <div class="q-box">
-            <strong>Який фактор є визначальним?</strong><br>
-            Єдиний статистично значущий ефект виявлено у моделі Multiple Regression —
-            платіжний метод <strong>PhonePe</strong> збільшує середній чек приблизно на 130 доларів.
-        </div>
+            <tr>
+                <td>3.1</td>
+                <td>
+                    <strong>Simple Linear Regression</strong><br>
+                    <small>(Numeric Age)</small>
+                </td>
+                <td>-0.00016</td>
+                <td>$1433.87</td>
+                <td>
+                    Intercept: 3020.00<br>
+                    Age = 8.86<br>
+                    p-value = 0.3073
+                </td>
+                <td data-en="Age has no statistically significant linear impact on spending.">
+                    Вік не має статистично значущого лінійного впливу на витрати.
+                </td>
+            </tr>
 
-        <div class="q-box" style="border-left: 5px solid #2196f3; background: #e3f2fd;">
-            <strong>Strategic Business Conclusion:</strong><br>
-            Age is statistically insignificant.
-            Фокус бізнес-стратегії доцільно змістити з вікової сегментації на аналіз платіжних методів
-            та поведінкових характеристик клієнтів.
-        </div>
+            <tr>
+                <td>3.2</td>
+                <td>
+                    <strong>Linear Regression</strong><br>
+                    <small>(Categorical Age)</small>
+                </td>
+                <td>0.00008</td>
+                <td>$1433.68</td>
+                <td data-en="Intercept: 3060.88<br>All p-values > 0.15">
+                    Intercept: 3060.88<br>
+                    Усі p-value &gt; 0.15
+                </td>
+                <td data-en="No statistically significant differences between age groups identified.">
+                    Статистично значущих відмінностей між віковими групами не виявлено.
+                </td>
+            </tr>
 
+            <tr>
+                <td>3.3</td>
+                <td>
+                    <strong>Random Forest</strong><br>
+                    <small>(Categorical Age)</small>
+                </td>
+                <td>0.00007</td>
+                <td>$1433.68</td>
+                <td data-en="Average forecast: $3045.47<br>Feature importance is evenly distributed">
+                    Середній прогноз: $3045.47<br>
+                    Важливість ознак розподілена рівномірно
+                </td>
+                <td data-en="The model confirms the very low predictive power of age.">
+                    Модель підтверджує дуже низьку прогностичну силу віку.
+                </td>
+            </tr>
+
+            <tr class="sig-row">
+                <td>3.4</td>
+                <td>
+                    <strong>Multiple Linear Regression</strong><br>
+                    <small>(All Features)</small>
+                </td>
+                <td>-0.00059</td>
+                <td>$1433.99</td>
+                <td>
+                    <strong>PhonePe UPI: +129.60 (p=0.008)</strong><br>
+                    Gender_Other: +44.70 (p=0.021)<br>
+                    Intercept: 2965.07
+                </td>
+                <td data-en="Spending is influenced by payment methods and demographics, but not age.">
+                    На витрати впливають платіжний метод та демографічні фактори, але не вік.
+                </td>
+            </tr>
+
+            <tr>
+                <td>3.5</td>
+                <td>
+                    <strong>Final Numeric Validation</strong>
+                </td>
+                <td>0.00000</td>
+                <td>$1438.57</td>
+                <td>
+                    Age = 3.24<br>
+                    p-value = 0.6758
+                </td>
+                <td data-en="Extremely weak numerical effect of age confirmed.">
+                    Підтверджено вкрай слабкий числовий ефект віку.
+                </td>
+            </tr>
+
+            <tr>
+                <td>3.6</td>
+                <td>
+                    <strong>Final Categorical Validation</strong>
+                </td>
+                <td>0.00020</td>
+                <td>$1438.41</td>
+                <td data-en="All age groups are statistically insignificant">
+                    Усі вікові групи статистично незначущі
+                </td>
+                <td data-en="Final confirmation: age category does not affect spending.">
+                    Остаточне підтвердження: вікова категорія не впливає на витрати.
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+<h3 style="color: #427192; margin-top: 40px;" data-en="4. Statistical Insights & Conclusions">
+    4. Статистичні інсайти та висновки
+</h3>
+<div class="eda-grid">
+    <div class="eda-item">
+        <p><strong data-en="Numeric Regression Plot">Графік числової регресії</strong></p>
+        <img src="Images/ML_Plots/age_numeric_regression.png" alt="Numeric">
+    </div>
+    <div class="eda-item">
+        <p><strong data-en="Categorical Comparison Plot">Графік категоріального порівняння</strong></p>
+        <img src="Images/ML_Plots/age_categorical_regression.png" alt="Categorical">
+    </div>
+</div>
+
+<div class="q-box" style="margin-top: 30px;" data-en="<strong>Who brings more revenue?</strong><br>Analysis showed that client age has no statistically significant impact on the average check. The R² value in all models is close to zero, indicating that age alone cannot explain variations in customer spending behavior.">
+    <strong>Хто приносить більше доходу?</strong><br>
+    Аналіз показав, що вік клієнта не має статистично значущого впливу на величину середнього чека. Значення R² у всіх побудованих моделях наближене до нуля, що свідчить про відсутність реальної пояснювальної сили вікового фактора в даному наборі даних.
+</div>
+
+<div class="q-box" data-en="<strong>What is the key factor?</strong><br>The only statistically significant effect was identified in the Multiple Regression model. The use of the <strong>PhonePe</strong> payment method is associated with an average check increase of approximately $130 (p-value = 0.008), making it a key driver of transaction value.">
+    <strong>Який фактор є визначальним?</strong><br>
+    Єдиний статистично значущий ефект виявлено у моделі множинної регресії: використання платіжного методу <strong>PhonePe</strong> збільшує середній чек приблизно на 130 доларів (p-value = 0.008). Це вказує на те, що технічні та поведінкові аспекти оплати важать більше, ніж демографія.
+</div>
+
+<div class="q-box" style="border-left: 5px solid #2196f3; background: #e3f2fd;" data-en="<strong>Strategic Business Conclusion:</strong><br>Age is statistically insignificant for predicting order value. It is recommended to shift the business strategy focus from traditional age-based segmentation to enhancing payment ecosystems and analyzing behavioral patterns of high-value segments.">
+    <strong>Стратегічний бізнес-висновок:</strong><br>
+    <strong>Вік є статистично незначущим фактором.</strong> Побудова маркетингової стратегії виключно на вікових групах є неефективною. Фокус доцільно змістити на оптимізацію платіжних екосистем та глибокий аналіз поведінкових характеристик (LTV, частота покупок, методи оплати), які мають реальний вплив на прибутковість.
+</div>
     </div>
 </section>
+
+</main> 
+
+<footer class="main-footer">
+    <div class="footer-content">
+        <p>© 2026 Anna Kulai | <span data-en="Analytical Research: From Data to Strategic Decisions">Аналітичне дослідження: Від даних до стратегічних рішень</span></p>
+        <p class="footer-sub" data-en="DTA Academy Final Project">Підсумковий проєкт | DTA Academy</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('lang-toggle').addEventListener('change', function() {
+        const isEn = this.checked;
+        document.querySelectorAll('[data-en]').forEach(el => {
+            if (!el.getAttribute('data-ua')) el.setAttribute('data-ua', el.innerHTML);
+            el.innerHTML = isEn ? el.getAttribute('data-en') : el.getAttribute('data-ua');
+        });
+    });
+
+    function loadTableau(id) {
+        var divElement = document.getElementById(id);
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth > 800) ? '850px' : '1600px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    }
+    loadTableau('viz1772448988327');
+    loadTableau('viz1772449015219');
+</script>
+
+</body>
+</html>
