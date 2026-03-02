@@ -1,0 +1,281 @@
+/* Підключення шрифтів */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #253238;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* ФОН СТОРІНКИ */
+    background-image: url("background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    padding-top: 150px; 
+}
+
+/* --- ФІКСОВАНИЙ ХЕДЕР --- */
+.main-title-box {
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background-image: url("background.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    box-sizing: border-box;
+    border-bottom: 2px solid #427192;
+}
+
+.hero-title {
+    color: #427192;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hero-subtitle {
+    color: #427192;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.author-block {
+    text-align: right;
+}
+
+.author-name {
+    color: #427192;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.academy-info {
+    color: #427192;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* --- КОНТЕЙНЕР ТА КАРТКИ --- */
+.container {
+    max-width: 1000px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card {
+    background: #ffffff; 
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    border: 1px solid #CFD8DC;
+}
+
+h2 {
+    color: #427192;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ECEFF1;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+}
+
+.task-info {
+    background: #F8F9FA;
+    padding: 15px;
+    border-left: 5px solid #427192;
+    margin-bottom: 20px;
+}
+
+.sql-screenshot {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+    display: block;
+}
+
+/* Контейнер для секції, щоб sticky працював правильно */
+.content-section {
+    position: relative;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+/* Динамічний підзаголовок */
+.sticky-sub-title {
+    position: -webkit-sticky; /* Для Safari */
+    position: sticky;
+    top: 120px; /* Висота твого основного хедера, щоб не було нахлесту */
+    z-index: 900; /* Трохи нижче, ніж основний хедер (там 1000) */
+    
+    background: rgba(255, 255, 255, 0.95); /* Світлий фон, щоб текст не зливався з картинками */
+    color: #427192; /* Твій сіро-синій колір */
+    padding: 15px 40px;
+    margin: 0;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ECEFF1;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+/* Прибираємо дублюючі заголовки всередині карток, якщо вони там були */
+.card h2 {
+    display: none; 
+}
+
+.task-info ul {
+    margin: 10px 0 0 20px;
+    padding: 0;
+}
+.task-info li {
+    margin-bottom: 5px;
+}
+
+.tableau-embed-container {
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden; /* Гарантує відсутність прокрутки */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tableauPlaceholder {
+    width: 100% !important; /* Розтягує на всю ширину картки */
+}
+
+/* Стилі для таблиці моделей */
+.model-table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.model-comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background: #ffffff;
+}
+
+.model-comparison-table th {
+    background-color: #427192;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #dee2e6;
+}
+
+.model-comparison-table td {
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    vertical-align: top;
+}
+
+.model-comparison-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Акценти для значущих результатів */
+.highlight-positive {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.insight-card {
+    background: #e3f2fd;
+    border-left: 5px solid #2196f3;
+    padding: 15px;
+    margin-top: 15px;
+}
+/* Сітка для порівняння графіків EDA */
+
+.eda-grid {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+.eda-item {
+    flex: 1;
+    text-align: center;
+}
+.eda-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.ml-results-box {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 5px solid #427192;
+}
+.q-and-a {
+    margin-top: 25px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+.q-and-a strong {
+    color: #427192;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.data-split-box {
+    background: #fdfcf0; /* Легкий кремовий колір для коду/структури */
+    border: 1px dashed #427192;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+}
+.data-split-box code {
+    color: #c7254e;
+    background: #f9f2f4;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.final-plots-vertical {
+    display: flex;
+    flex-direction: column; /* Має бути колонкою */
+    align-items: center;    /* Центрування графіків */
+    gap: 20px;
+    width: 100%;
+}
+
+.final-plots-vertical .eda-item {
+    width: 100%;
+    max-width: 900px; /* Обмежуємо, щоб графік не був на весь гігантський монітор, але був великим */
+    text-align: center;
+}
+
+.final-plots-vertical img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
