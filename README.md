@@ -107,7 +107,10 @@ pip install -r requirements.txt
 ---
 
 ## 💻 Tech Stack
-* **SQL**: BigQuery (Standard SQL)
-* **BI**: Tableau Desktop / Tableau Public
-* **Python**: Pandas, NumPy, Scikit-learn, Statsmodels, Seaborn, Matplotlib
-* **Environment**: Jupyter Notebook, Virtualenv
+
+* **SQL:** BigQuery (Standard SQL)
+* **BI:** Tableau Desktop / Tableau Public
+* **Python:** Pandas, NumPy, Scikit-learn, Statsmodels, Seaborn, Matplotlib
+* **Web & Frontend:** HTML5, CSS3, JavaScript (Multi-language logic)
+* **DevOps & CI/CD:** GitHub Actions, GitHub Pages
+* **Environment:** Jupyter Notebook, VS Code, Git, Virtualenv
