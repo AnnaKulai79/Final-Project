@@ -292,45 +292,79 @@ h2 {
 }
 
 
-.main-footer {
-    padding: 20px 40px;
-    border-top: 1px solid #eee; /* Опціонально, для розділення */
-}
-
-.footer-content {
-    display: grid;
-    /* Створюємо 3 колонки: ліва порожня, центр для QR, права для тексту */
-    grid-template-columns: 1fr auto 1fr; 
-    align-items: center;
-    gap: 20px;
-}
-
-/* Контейнер для QR-кодів (завжди в центрі) */
-.qr-container {
-    grid-column: 2; /* Фіксуємо у другій колонці */
+.qr-main-container {
+    width: 100%;
+    margin: 60px 0;
     display: flex;
+    justify-content: center;
+}
+
+.qr-white-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 1300px; /* Відповідає вашому .container */
+    padding: 60px 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Заголовок над кодами */
+    align-items: center;
+    border: 1px solid #CFD8DC;
+    box-sizing: border-box;
+}
+
+.qr-title {
+    color: #427192; /* Ваш фірмовий колір */
+    margin: 0 0 50px 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.qr-content-wrapper {
+    display: flex;
+    gap: 150px; /* Велика відстань між кодами */
+    justify-content: center;
+}
+
+.qr-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 15px;
 }
 
 .qr-item img {
-    width: 85px;
-    height: 85px;
+    width: 180px; /* Дуже великі QR */
+    height: 180px;
     display: block;
+    transition: transform 0.3s ease;
 }
 
-/* Контейнер для тексту (завжди справа) */
+.qr-item img:hover {
+    transform: scale(1.05);
+}
+
+.qr-label {
+    color: #427192;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.main-footer {
+    width: 100%;
+    padding: 20px 5% 40px 5%;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
 .footer-text-block {
-    grid-column: 3; /* Фіксуємо у третій колонці */
     text-align: right;
 }
 
-.footer-content p {
-    margin: 2px 0;
-    font-size: 0.85rem;
-    color: #427192;
-}
-
-.footer-sub {
-    font-size: 0.75rem;
-    opacity: 0.7;
+.footer-text-block p, 
+.footer-text-block span {
+    color: #427192 !important;
+    font-weight: 600;
 }
