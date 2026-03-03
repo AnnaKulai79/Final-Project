@@ -293,30 +293,44 @@ h2 {
 
 
 .main-footer {
-    width: 100%;
-    padding: 60px 0 30px 0; /* Великий відступ зверху, щоб відокремити від контенту */
-    margin-top: 20px;
-    background: transparent; /* Повністю прозорий, щоб бачити фон */
-    text-align: right;
+    padding: 20px 40px;
+    border-top: 1px solid #eee; /* Опціонально, для розділення */
 }
 
 .footer-content {
-    /* Вирівнюємо по правому краю екрана з невеликим відступом */
-    max-content: 100%;
-    padding-right: 40px;
+    display: grid;
+    /* Створюємо 3 колонки: ліва порожня, центр для QR, права для тексту */
+    grid-template-columns: 1fr auto 1fr; 
+    align-items: center;
+    gap: 20px;
+}
+
+/* Контейнер для QR-кодів (завжди в центрі) */
+.qr-container {
+    grid-column: 2; /* Фіксуємо у другій колонці */
+    display: flex;
+    gap: 15px;
+}
+
+.qr-item img {
+    width: 85px;
+    height: 85px;
+    display: block;
+}
+
+/* Контейнер для тексту (завжди справа) */
+.footer-text-block {
+    grid-column: 3; /* Фіксуємо у третій колонці */
+    text-align: right;
 }
 
 .footer-content p {
-    color: #427192; /* Ваш фірмовий синій */
-    font-weight: 700;
-    margin: 5px 0;
-    font-size: 0.9rem;
-    opacity: 0.7; /* Робимо трохи блідим, щоб не відволікав */
+    margin: 2px 0;
+    font-size: 0.85rem;
+    color: #427192;
 }
 
 .footer-sub {
-    font-weight: 400 !important;
-    font-size: 0.75rem !important;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 0.75rem;
+    opacity: 0.7;
 }
